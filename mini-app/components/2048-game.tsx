@@ -88,17 +88,17 @@ const hasMoves = (board: number[][]) => {
 
 const tileColors: Record<number, string> = {
   0: "bg-gray-200",
-  2: "bg-yellow-200",
-  4: "bg-yellow-300",
-  8: "bg-orange-200",
-  16: "bg-orange-300",
-  32: "bg-red-200",
-  64: "bg-red-300",
-  128: "bg-green-200",
-  256: "bg-green-300",
-  512: "bg-blue-200",
-  1024: "bg-blue-300",
-  2048: "bg-orange-500",
+  2: "bg-indigo-200",
+  4: "bg-indigo-300",
+  8: "bg-purple-200",
+  16: "bg-purple-300",
+  32: "bg-pink-200",
+  64: "bg-pink-300",
+  128: "bg-yellow-200",
+  256: "bg-yellow-300",
+  512: "bg-green-200",
+  1024: "bg-green-300",
+  2048: "bg-red-500",
 };
 
 export default function Game2048() {
