@@ -96,3 +96,45 @@
     @apply bg-background text-foreground;
   }
 }
+
+@layer utilities {
+  /* Sky with day/night cycle (30s each) */
+  .sky {
+    @apply absolute inset-0;
+    background: linear-gradient(to bottom, #87ceeb, #f0f8ff);
+    animation: day-night 60s infinite;
+  }
+  @keyframes day-night {
+    0%, 50%   { background: linear-gradient(to bottom, #87ceeb, #f0f8ff); }
+    50.01%, 100% { background: linear-gradient(to bottom, #001d3d, #000000); }
+  }
+
+  /* Moving clouds */
+  .cloud {
+    position: absolute;
+    background: #ffffff;
+    opacity: 0.8;
+    border-radius: 50%;
+    animation: move-cloud 60s linear infinite;
+  }
+  @keyframes move-cloud {
+    0%   { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+  }
+
+  /* Moon that appears only at night */
+  .moon {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: #f0e68c;
+    border-radius: 50%;
+    top: 20%;
+    left: 80%;
+    animation: moon-appear 60s infinite;
+  }
+  @keyframes moon-appear {
+    0%, 50%   { opacity: 0; }
+    50.01%, 100% { opacity: 1; }
+  }
+}
