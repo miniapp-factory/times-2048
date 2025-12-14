@@ -5,6 +5,9 @@ import { MiniAppProvider } from "@/components/context/miniapp-provider";
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
 import { description, title } from "@/lib/metadata";
+import { WagmiProvider } from 'wagmi';
+import { configureChains, createConfig, mainnet, publicProvider } from 'wagmi';
+import { ReactNode } from 'react';
 
 const inter = localFont({
   src: "./InterVariable.ttf",
