@@ -1,6 +1,5 @@
 "use client";
 import { useSendCalls } from 'wagmi';
-import { parseEther } from 'viem';
 
 export default function SendCallsButton() {
   const { sendCalls } = useSendCalls();
