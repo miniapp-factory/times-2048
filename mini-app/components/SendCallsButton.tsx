@@ -1,7 +1,6 @@
 "use client";
 import { useSendCalls } from 'wagmi';
 import { parseEther } from 'viem';
-import { Attribution } from 'ox/erc8021';
 
 export default function SendCallsButton() {
   const { sendCalls } = useSendCalls();
@@ -16,9 +15,6 @@ export default function SendCallsButton() {
               data: '0xdeadbeef',
             },
           ],
-          capabilities: {
-            dataSuffix: Attribution.toDataSuffix({ codes: ['bc_zro9hkjd'] }),
-          },
         })
       }
     >
