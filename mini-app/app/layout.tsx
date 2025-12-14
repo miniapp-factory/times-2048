@@ -13,6 +13,9 @@ const inter = localFont({
   src: "./InterVariable.ttf",
 });
 
+const { chains, publicClient } = configureChains([mainnet], [publicProvider()]);
+const config = createConfig({ chains, publicClient });
+
 export const metadata: Metadata = {
   title,
   description,
@@ -26,13 +29,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className} antialiased`}>
-        <MiniAppProvider>
-          <div className="font-sans min-h-screen flex flex-col place-content-between gap-2">
-            <Header />
-            {children}
-            <Footer />
-          </div>
-        </MiniAppProvider>
+        <WagmiProvider config={config}>
+          <MiniAppProvider>
+            <div className="font-sans min-h-screen flex flex-col place-content-between gap-2">
+              <Header />
+              {children}
+              <Footer />
+            </div>
+          </MiniAppProvider>
+        </WagmiProvider>
       </body>
     </html>
   );
