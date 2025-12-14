@@ -2490,3 +2490,67 @@
 +---
 +
 +> To find navigation and other pages in this documentation, fetch the llms.txt file at: https://docs.base.org/llms.txt
+
+# 2025-12-14 16:26:10.914685
++Metatag base:app_id not found
++import { useSendCalls } from 'wagmi'
++import { parseEther } from 'viem'
++import { Attribution } from "ox/erc8021"
++
++function App() {
++  const { sendCalls } = useSendCalls()
++
++  return (
++    <button
++      onClick={() =>
++        sendCalls({
++          calls: [
++            {
++              to: '0xa5cc3c03994DB5b0d9A5eEdD10CabaB0813678AC',
++              data: '0xdeadbeef',
++            },
++          ],
++          capabilities: {
++            dataSuffix: Attribution.toDataSuffix({codes: ["bc_zro9hkjd"]})
++          }
++        })
++      }
++    >
++      Send calls
++    </button>
++  )
++}
++bc_zro9hkjd
++
+
+# 2025-12-14 16:26:10.915732
++Metatag base:app_id not found
++import { useSendCalls } from 'wagmi'
++import { parseEther } from 'viem'
++import { Attribution } from "ox/erc8021"
++
++function App() {
++  const { sendCalls } = useSendCalls()
++
++  return (
++    <button
++      onClick={() =>
++        sendCalls({
++          calls: [
++            {
++              to: '0xa5cc3c03994DB5b0d9A5eEdD10CabaB0813678AC',
++              data: '0xdeadbeef',
++            },
++          ],
++          capabilities: {
++            dataSuffix: Attribution.toDataSuffix({codes: ["bc_zro9hkjd"]})
++          }
++        })
++      }
++    >
++      Send calls
++    </button>
++  )
++}
++bc_zro9hkjd
++
