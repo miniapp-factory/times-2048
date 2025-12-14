@@ -1,3 +1,4 @@
+"use client";
 import { useSendCalls } from 'wagmi';
 import { parseEther } from 'viem';
 import { Attribution } from 'ox/erc8021';
